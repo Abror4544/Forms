@@ -1,0 +1,685 @@
+* {
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Googlesans-bold';
+  src: url("../fonts/Googlesans/GOOGLESANS-BOLD.TTF");
+}
+
+@font-face {
+  font-family: 'Googlesans-medium';
+  src: url("../fonts/Googlesans/GOOGLESANS-MEDIUM.TTF");
+}
+
+@font-face {
+  font-family: 'Googlesans-regular';
+  src: url("../fonts/Googlesans/GOOGLESANS-REGULAR.TTF");
+}
+
+.paymentForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 30px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.formWrapper {
+  max-width: 590px;
+  width: 100%;
+  height: auto;
+}
+
+.formTitleBlock {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.formTitle {
+  font-family: 'Googlesans-bold';
+  font-size: 20px;
+  color: #545454;
+  text-align: center;
+}
+
+.mainBtn {
+  padding: 12px 0;
+  background: #4cb32b;
+  width: 100%;
+  color: #ffffff;
+  font-family: "Googlesans-bold";
+  font-size: 10px;
+  text-transform: uppercase;
+  border: none;
+  outline-style: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.backBtn {
+  background: none;
+  outline-style: none;
+  border: none;
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.backBtn svg {
+  -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.choiceBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.firstLvl .accordion-body {
+  padding: 0;
+}
+
+.firstLvl .accordion-item {
+  border: none;
+  margin-bottom: 10px;
+}
+
+.firstLvl .accordion-button {
+  font-family: 'Googlesans-bold';
+  color: #4cb32b;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  border-radius: 10px !important;
+  border: 2px solid #4cb32b;
+  padding: 12px 28px;
+  width: 100%;
+  background-color: #edffe7;
+}
+
+.firstLvl .accordion-button:focus {
+  z-index: 3;
+  border-color: #4cb32b !important;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.25rem #4cb32b99;
+          box-shadow: 0 0 0 0.25rem #4cb32b99;
+}
+
+.firstLvl .accordion-button.collapsed {
+  color: #acb3c3;
+  font-family: 'Googlesans-regular';
+  background-color: #ffffff;
+  border: 2px solid #d7dbe5;
+}
+
+.firstLvl .accordion-button::after {
+  display: none;
+}
+
+.firstLvl .choiceBlock .personimg {
+  width: 100%;
+  height: 100%;
+}
+
+.firstLvl .choiceBlock .personImgBlock {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 2px solid #ffffff;
+  overflow: hidden;
+}
+
+.firstLvl .choiceBlock .personName {
+  font-family: 'Googlesans-regular';
+  font-size: 10px;
+  color: #545454;
+  text-align: center;
+  margin-top: 20px;
+  height: 20px;
+}
+
+.firstLvl .choiceBlock .label {
+  width: 33%;
+  cursor: pointer;
+  background: #ffffff;
+  margin-bottom: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.firstLvl .choiceBlock input:checked ~ .radiobox {
+  opacity: 1;
+}
+
+.firstLvl .choiceBlock input:checked ~ .radiobox {
+  background: #4baf2a;
+}
+
+.firstLvl .choiceBlock input:checked ~ .personImgBlock {
+  border: 2px solid #4cb32b;
+}
+
+.firstLvl .choiceBlock label .radio {
+  display: none;
+}
+
+.firstLvl .choiceBlock .radiobox {
+  opacity: 0;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #4baf2a;
+  cursor: pointer;
+  margin-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.secondLvl {
+  display: none;
+}
+
+.secondLvl .personInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.secondLvl .personName {
+  margin-top: 10px;
+  color: #545454;
+  font-family: 'Googlesans-regular';
+  font-size: 13px;
+}
+
+.secondLvl .moneyLabel {
+  width: 49%;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.secondLvl .circle {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d7dbe5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.secondLvl .circle .miniCircle {
+  width: 8px;
+  height: 8px;
+  background: #d7dbe5;
+  border-radius: 50%;
+}
+
+.secondLvl input:checked ~ .moneyChoiceItem .circle {
+  border-color: #50b430;
+}
+
+.secondLvl input:checked ~ .moneyChoiceItem .miniCircle {
+  background: #50b430;
+}
+
+.secondLvl .moneyRadio {
+  display: none;
+}
+
+.secondLvl .moneyChoiceItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  border: 2px solid #e3e8f0;
+  overflow: hidden;
+}
+
+.secondLvl .moneyEffect {
+  background: #f0f2f7;
+  padding: 10px 20px;
+}
+
+.secondLvl .moneyQty,
+.secondLvl .moneyQtyInp {
+  padding-left: 20px;
+  color: #545454;
+  font-family: 'Googlesans-regular';
+  font-size: 10px;
+}
+
+.secondLvl .moneyQtyInp {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline-style: none;
+}
+
+.secondLvl .inpDesc {
+  color: #545454;
+  font-family: 'Googlesans-regular';
+  font-size: 10px;
+  margin-top: 20px;
+}
+
+.secondLvl .emailInp::-webkit-input-placeholder {
+  color: #acb3c3;
+}
+
+.secondLvl .emailInp::-moz-placeholder {
+  color: #acb3c3;
+}
+
+.secondLvl .emailInp:-ms-input-placeholder {
+  color: #acb3c3;
+}
+
+.secondLvl .emailInp::-ms-input-placeholder {
+  color: #acb3c3;
+}
+
+.secondLvl .emailInp::placeholder {
+  color: #acb3c3;
+}
+
+.secondLvl .emailInp {
+  width: 100%;
+  color: #545454;
+  font-family: 'Googlesans-regular';
+  font-size: 10px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: 2px solid #d7dbe5;
+  outline-style: none;
+}
+
+.secondLvl .agreementBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.secondLvl .checkbox {
+  display: none;
+}
+
+.secondLvl .checkbox:checked ~ .agreeCheck svg {
+  opacity: 1;
+}
+
+.secondLvl .agreeCheck {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #d7dbe5;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.secondLvl .agreeCheck svg {
+  opacity: 0;
+}
+
+.secondLvl .agreeText {
+  color: #545454;
+  font-family: 'Googlesans-regular';
+  font-size: 10px;
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.secondLvl .term {
+  color: #097dff;
+  text-decoration: none;
+}
+
+.secondLvl .mainBtn {
+  margin-top: 20px;
+}
+
+.secondLvl .mainBtn:disabled {
+  background: #c1c9d6;
+}
+
+.thirdLvl {
+  display: none;
+}
+
+.thirdLvl .paymentBanner {
+  border-radius: 10px;
+  background: #f0f2f7;
+  padding: 20px;
+}
+
+.thirdLvl .paymentDetailText {
+  color: #545454;
+  font-family: "Googlesans-bold";
+  font-size: 10px;
+}
+
+.thirdLvl .logosBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.thirdLvl .payType {
+  width: 22%;
+}
+
+.thirdLvl .payType img {
+  width: 100%;
+}
+
+.thirdLvl .inputItems {
+  margin-top: 20px;
+}
+
+.thirdLvl .cardNumber,
+.thirdLvl .expiration,
+.thirdLvl .cv,
+.thirdLvl .owner {
+  color: #545454;
+  font-family: "Googlesans-regular";
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.thirdLvl input::-webkit-input-placeholder {
+  color: #acb3c3;
+}
+
+.thirdLvl input::-moz-placeholder {
+  color: #acb3c3;
+}
+
+.thirdLvl input:-ms-input-placeholder {
+  color: #acb3c3;
+}
+
+.thirdLvl input::-ms-input-placeholder {
+  color: #acb3c3;
+}
+
+.thirdLvl input::placeholder {
+  color: #acb3c3;
+}
+
+.thirdLvl .cardBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+  border: 2px solid #d7dbe5;
+  overflow: hidden;
+  padding-left: 20px;
+}
+
+.thirdLvl .cardBlock input {
+  border: none;
+  color: #545454;
+  font-family: "Googlesans-regular";
+  font-size: 10px;
+  outline-style: none;
+  width: 100%;
+}
+
+.thirdLvl .cardBlock .cardLogo {
+  background: #f0f2f7;
+  padding: 5px 10px;
+}
+
+.thirdLvl .cardBlock .cardLogo img {
+  width: 100%;
+}
+
+.thirdLvl .cardInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.thirdLvl .date {
+  width: 58%;
+}
+
+.thirdLvl .cvc {
+  width: 38%;
+}
+
+.thirdLvl .date input,
+.thirdLvl .cardOwner input,
+.thirdLvl .cvc input {
+  border-radius: 10px;
+  border: 2px solid #d7dbe5;
+  color: #545454;
+  font-family: "Googlesans-regular";
+  font-size: 10px;
+  outline-style: none;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.thirdLvl .cardBlock,
+.thirdLvl .cardInfo,
+.thirdLvl .cardOwner {
+  margin-bottom: 10px;
+}
+
+.thirdLvl .appleBtn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000000;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 5px 0;
+}
+
+.thirdLvl .appleBtn img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.finish {
+  display: none;
+}
+
+.finish .personInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.finish .personName {
+  margin-top: 10px;
+  color: #545454;
+  font-family: 'Googlesans-regular';
+  font-size: 13px;
+}
+
+.finish .thankfulBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #edffe7;
+  border: 1px solid #edffe7;
+  border-radius: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 0;
+}
+
+.finish .thankfulBlock img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.finish .thankmsg {
+  color: #4cb32b;
+  margin-top: 20px;
+  font-family: 'Googlesans-bold';
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.finish .thankmsg span {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 350px) {
+  .firstLvl .choiceBlock .checked {
+    width: 50%;
+  }
+
+  .firstLvl .choiceBlock .radiobox {
+    width: 14px;
+    height: 14px;
+    top: 5px;
+    right: 5px;
+  }
+
+  .secondLvl .moneyEffect {
+    padding: 10px 5px;
+  }
+}

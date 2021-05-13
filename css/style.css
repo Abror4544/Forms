@@ -21,6 +21,7 @@
 
 input{  
   -webkit-appearance: none;
+  box-shadow: none !important;
 }
 
 .paymentForm {
